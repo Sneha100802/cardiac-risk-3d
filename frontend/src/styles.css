@@ -1,0 +1,31 @@
+:root { --ink:#1d2733; --muted:#5d6b7a; --line:#d9dee4; --bg:#f6f7f9; --card:#fff; --accent:#1f5f8b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Source Sans 3", system-ui, "Segoe UI", sans-serif; color:var(--ink); background:var(--bg); }
+.disclaimer { background:#fff4d6; border-bottom:2px solid #e8b923; padding:10px 20px; font-weight:600; font-size:14px; }
+.layout { display:grid; grid-template-columns: minmax(320px,1.2fr) minmax(300px,1fr); gap:20px; padding:20px; max-width:1300px; margin:0 auto; }
+.viewer, .panel, .form { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px; }
+.form { grid-column: 1 / -1; }
+h2 { margin:0 0 10px; font-size:17px; }
+.hint { color:var(--muted); font-size:13px; margin:6px 0 0; }
+.error { color:#b3261e; font-weight:600; }
+.cad { display:flex; justify-content:space-between; align-items:baseline; padding:8px 0 12px; border-bottom:1px solid var(--line); margin-bottom:10px; }
+.cad strong { font-size:30px; }
+.vessel-list, .shap { list-style:none; padding:0; margin:0 0 18px; }
+.vessel-list button { width:100%; display:flex; justify-content:space-between; padding:10px 12px; margin-bottom:6px; border:1px solid var(--line); border-radius:6px; background:#fff; font:inherit; cursor:pointer; }
+.vessel-list button.on { border-color:var(--accent); box-shadow:0 0 0 2px rgba(31,95,139,.18); }
+.units { font-size:13px; color:var(--muted); margin:0 0 8px; }
+.shap li { display:grid; grid-template-columns: 1fr 120px; gap:10px; align-items:center; padding:4px 0; font-size:14px; }
+.shap em { color:var(--muted); font-style:normal; font-size:12px; }
+.shap .bar { background:#eef1f4; height:10px; border-radius:5px; overflow:hidden; }
+.shap .bar i { display:block; height:100%; }
+.fields { display:grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap:10px 14px; }
+.fields label { display:flex; flex-direction:column; font-size:12px; color:var(--muted); gap:3px; }
+.fields input, .fields select { padding:6px; border:1px solid var(--line); border-radius:4px; font:inherit; color:var(--ink); }
+.vessel-tag { background:rgba(29,39,51,.85); color:#fff; font-size:11px; padding:2px 6px; border-radius:3px; white-space:nowrap; }
+.vessel-tag.is-selected { outline:2px solid #fff; }
+@media (max-width: 800px) { .layout { grid-template-columns: 1fr; } }
+
+.examples { display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin:0 0 10px; font-size:13px; color:var(--muted); }
+.examples button { border:1px solid var(--accent); background:#fff; color:var(--accent); border-radius:14px; padding:4px 10px; font:inherit; cursor:pointer; }
+.examples button:hover { background:var(--accent); color:#fff; }
+.examples button.ghost { border-color:var(--line); color:var(--muted); }
